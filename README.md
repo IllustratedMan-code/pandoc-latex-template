@@ -40,5 +40,5 @@ pandoc mydoc.md -o mydoc.pdf
 You can also just look at README.pdf
 
 ![](screenshot1.png)
-![](screenshot2.png)
+![](screenshot2fixed.png)
 
