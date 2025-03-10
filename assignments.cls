@@ -52,9 +52,16 @@
 \BeforeBeginEnvironment{verbatim}{\begin{tcolorbox}[enhanced, breakable, skin first=enhanced, skin middle=enhanced, skin last=enhanced]}%
 		\AfterEndEnvironment{verbatim}{\end{tcolorbox}}
 
-\BeforeBeginEnvironment{Highlighting}{\begin{tcolorbox}[enhanced, breakable, skin first=enhanced, skin middle=enhanced, skin last=enhanced]}%
-		\AfterEndEnvironment{Highlighting}{\end{tcolorbox}}
+\definecolor{shadecolor}{RGB}{248,248,248}
+\BeforeBeginEnvironment{Shaded}{\begin{tcolorbox}[enhanced, breakable, skin first=enhanced, skin middle=enhanced, skin last=enhanced, colback=shadecolor, left=1pt, right=1pt, top=1pt, bottom=1pt]}%
+		\AfterEndEnvironment{Shaded}{\end{tcolorbox}}
 %%%%%
+%% override rmarkdown verbatim stuff
+\RequirePackage{fancyvrb}
+\RequirePackage{fvextra}
+\let\oldDefineVerbatimEnvironment\DefineVerbatimEnvironment
+\renewcommand{\DefineVerbatimEnvironment}[3]{\oldDefineVerbatimEnvironment{#1}{#2}{breaklines, #3}}
+%%%%
 
 
 
