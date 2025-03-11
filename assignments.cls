@@ -139,11 +139,11 @@
 \def\@maketitle{%
 	\newpage
 	\null{}
-	\vskip 2em%
+	\vskip 0em%
 	\begin{center}%
 		\let\footnote\thanks{}
 		{\LARGE \@title \par}%
-		\vskip 1.5em%
+		\vskip 0em%
 			{\large
 				\lineskip .5em%
 				\begin{tabularold}[t]{c}%
@@ -154,7 +154,7 @@
 			{\large \@date}%
 	\end{center}%
 	\par
-	\vskip 1.5em}
+	\vskip 0em}
 
 %%%%% Captions
 %\RequirePackage{caption}
